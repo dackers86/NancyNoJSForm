@@ -1,0 +1,22 @@
+﻿@using ExampleNonJSForm.Models;
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<PersonalDetails>
+@{
+    Layout = "Layout/Base.cshtml";
+}
+
+<div>
+    Please fill out your car details....
+</div>
+
+
+<form action="/car/details" method="post">
+    <div>
+        <div>
+            <input type="text" name="Make" />
+        </div>
+        <div>
+            <input type="text" name="Model" />
+        </div>
+    </div>
+    <input type="submit" value="Get Started" />
+</form>
